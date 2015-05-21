@@ -1,5 +1,6 @@
 
 
+import java.net.URL;
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 
@@ -10,6 +11,9 @@ import static org.hamcrest.CoreMatchers.*;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class CrearUnaLista {
@@ -23,6 +27,9 @@ public class CrearUnaLista {
     driver = new FirefoxDriver();
     baseUrl = "https://trello.com/b/hgnEQYl5/didlogic";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    //this.driver = new Capabi(driver).cap();
+    this.driver = new Capabi(driver).cap2();
+    
   }
 
   @Test

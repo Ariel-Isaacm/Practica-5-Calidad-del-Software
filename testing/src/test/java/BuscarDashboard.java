@@ -23,6 +23,8 @@ public class BuscarDashboard {
     driver = new FirefoxDriver();
     baseUrl = "https://trello.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    //this.driver = new Capabi(driver).cap();
+    this.driver = new Capabi(driver).cap2();
   }
 
   @Test

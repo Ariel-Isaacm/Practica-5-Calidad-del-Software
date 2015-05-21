@@ -3,6 +3,7 @@
 
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.junit.*;
 
@@ -25,11 +26,15 @@ public class CambiarNombreDashboard {
     driver = new FirefoxDriver();
     baseUrl = "https://trello.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    //this.driver = new Capabi(driver).cap();
+    this.driver = new Capabi(driver).cap2();
   }
 
   @Test
   public void testCrearDashboard() throws Exception {
 	  //acceder al sitio y logear
+	  
+	  
 	  driver.get("https://trello.com/login");
 	  driver.findElement(By.id("user")).sendKeys("CalidadSoftware");
 	  driver.findElement(By.id("password")).sendKeys("CALIDADSOFTWARE");
